@@ -8,50 +8,56 @@
 <style>
 :root { color-scheme: light dark; }
 * { box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; margin:0; padding:0; background:#eeeeee; color:#1a1a1a; max-width:600px; margin-left:auto; margin-right:auto; font-size:14px; }
-.hero { background:linear-gradient(135deg, #1a1a1a 0%, #4d4d4d 100%); color:white; padding:16px; border-radius:0 0 18px 18px; margin-bottom:12px; box-shadow:0 2px 10px rgba(0,0,0,0.25); }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; margin:0; padding:0; background:#eef0fa; color:#1c2240; max-width:600px; margin-left:auto; margin-right:auto; font-size:14px; }
+.hero { background:linear-gradient(135deg, #2b3990 0%, #4453c4 100%); color:white; padding:16px; border-radius:0 0 18px 18px; margin-bottom:10px; box-shadow:0 2px 10px rgba(43,57,144,0.35); }
 .hero h1 { font-size: 1.2rem; margin: 0 0 2px 0; font-weight:800; }
-.hero .updated { font-size: 0.7rem; color:rgba(255,255,255,0.8); }
+.hero .updated { font-size: 0.7rem; color:rgba(255,255,255,0.85); }
+.childtabs { display:flex; gap:8px; margin-top:10px; }
+.childtab-btn { flex:1; padding:9px; border:none; border-radius:10px; background:rgba(255,255,255,0.18); color:#fff; font-weight:800; font-size:0.9rem; cursor:pointer; }
+.childtab-btn.active { background:#ffb830; color:#2b3990; }
+.childview { display:none; }
+.childview.active { display:block; }
 .content { padding: 0 10px 14px 10px; }
-.section-title { font-size:0.85rem; font-weight:800; color:#333; margin:16px 2px 8px 2px; padding-top:10px; border-top:1px dashed #ccc; text-transform:uppercase; letter-spacing:0.03em; }
-.row { background:white; border-radius:10px; padding:8px 11px; margin-bottom:6px; box-shadow:0 1px 3px rgba(0,0,0,0.08); }
+.section-title { font-size:0.85rem; font-weight:800; color:#2b3990; margin:16px 2px 8px 2px; padding-top:10px; border-top:1px dashed #c6cbea; text-transform:uppercase; letter-spacing:0.03em; }
+.row { background:white; border-radius:10px; padding:8px 11px; margin-bottom:6px; box-shadow:0 1px 3px rgba(43,57,144,0.08); }
 .row.done { opacity:0.5; }
 .row-top { display:flex; align-items:center; justify-content:space-between; gap:6px; }
-.matiere { font-size:0.78rem; font-weight:700; padding:2px 7px; border-radius:5px; }
-.matiere.patxi { background:#1a1a1a; color:#fff; }
-.matiere.juliette { background:#e8d9c3; color:#5a3d1a; }
-.ddate { font-size:0.7rem; color:#999; font-weight:600; }
+.matiere { font-size:0.78rem; font-weight:700; padding:2px 7px; border-radius:5px; background:#2b3990; color:#fff; }
+.ddate { font-size:0.7rem; color:#8890b8; font-weight:600; }
 .contenu { font-size:0.82rem; color:#333; margin-top:5px; line-height:1.4; }
-.nrow { background:white; border-radius:10px; padding:7px 11px; margin-bottom:5px; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
-.nrow-top { display:flex; justify-content:space-between; align-items:center; }
-.nmatiere { font-size:0.8rem; font-weight:600; }
-.nval { font-weight:800; font-size:0.85rem; padding:1px 8px; border-radius:6px; background:#eee; }
-.nval.good { background:#d4f0d4; color:#1a6b1a; }
-.nval.bad { background:#f8d7da; color:#a4282f; }
-.ndevoir { font-size:0.7rem; color:#888; margin-top:2px; }
-.eday { background:white; border-radius:10px; padding:8px 11px; margin-bottom:6px; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
-.eday-title { font-size:0.78rem; font-weight:800; color:#1a1a1a; margin-bottom:5px; text-transform:capitalize; }
-.erow { display:flex; gap:8px; font-size:0.78rem; padding:2px 0; border-bottom:1px solid #f2f2f2; }
+.nrow { background:white; border-radius:10px; padding:8px 11px; margin-bottom:6px; box-shadow:0 1px 3px rgba(43,57,144,0.06); }
+.nrow-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:5px; }
+.nmatiere { font-size:0.8rem; font-weight:700; color:#2b3990; }
+.moy { font-size:0.72rem; font-weight:800; padding:1px 7px; border-radius:6px; background:#eee; }
+.moy.good { background:#d4f0d4; color:#1a6b1a; }
+.moy.bad { background:#f8d7da; color:#a4282f; }
+.nchips { display:flex; flex-wrap:wrap; gap:5px; }
+.nchip { font-size:0.74rem; font-weight:700; padding:2px 7px; border-radius:6px; background:#eee; color:#555; }
+.nchip.good { background:#d4f0d4; color:#1a6b1a; }
+.nchip.bad { background:#f8d7da; color:#a4282f; }
+.eday { background:white; border-radius:10px; padding:8px 11px; margin-bottom:6px; box-shadow:0 1px 3px rgba(43,57,144,0.06); }
+.eday-title { font-size:0.78rem; font-weight:800; color:#2b3990; margin-bottom:5px; text-transform:capitalize; }
+.erow { display:flex; gap:8px; font-size:0.78rem; padding:2px 0; border-bottom:1px solid #f2f2f6; }
 .erow:last-child { border-bottom:none; }
 .etime { font-weight:700; color:#555; min-width:70px; }
 .emat { flex:1; font-weight:600; }
 .eprof { color:#999; font-size:0.72rem; }
 footer { text-align:center; font-size:0.65rem; color:#999; margin-top:16px; padding-bottom:12px; }
-.tabs { display:flex; gap:6px; margin-bottom:8px; }
-.tab-btn { flex:1; padding:7px; border:none; border-radius:8px; background:#ddd; color:#555; font-weight:700; font-size:0.8rem; cursor:pointer; }
-.tab-btn.active { background:#1a1a1a; color:#fff; }
-.tab-panel { display:none; }
-.tab-panel.active { display:block; }
 .empty { text-align:center; color:#999; font-size:0.8rem; padding:12px; font-style:italic; }
 </style>
 </head>
 <body>
 <div class="hero">
   <h1>📚 Suivi scolaire</h1>
-  <div class="updated">Mise à jour : 25/11/2026 à 20h52 · 46 notes au total</div>
+  <div class="updated">Mise à jour : 25/11/2026 à 21h18</div>
+  <div class="childtabs">
+    <button class="childtab-btn active" onclick="showChild('child-patxi', this)">Patxi</button>
+    <button class="childtab-btn" onclick="showChild('child-juliette', this)">Juliette</button>
+  </div>
 </div>
 <div class="content">
-<div class="section-title">🗓️ Emploi du temps — Patch</div>
+<div id="child-patxi" class="childview active">
+<div class="section-title">🗓️ Emploi du temps</div>
 <div class="eday"><div class="eday-title">lundi 23/11</div><div class="erow"><span class="etime">08:00-08:55</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S.</span></div>
 <div class="erow"><span class="etime">10:10-11:05</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S. · Salle 4B</span></div>
 <div class="erow"><span class="etime">11:05-12:00</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
@@ -73,8 +79,7 @@ footer { text-align:center; font-size:0.65rem; color:#999; margin-top:16px; padd
 </div>
 <div class="eday"><div class="eday-title">jeudi 26/11</div><div class="erow"><span class="etime">08:00-08:55</span><span class="emat">CULTURE RELIGIEUSE</span><span class="eprof">ALLIONE D. · Salle 4B</span></div>
 <div class="erow"><span class="etime">08:55-09:50</span><span class="emat">PHYSIQUE-CHIMIE</span><span class="eprof">LAGIER M. · Salle 4B</span></div>
-<div class="erow"><span class="etime">10:10-11:05</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S. · Salle 4B</span></div>
-<div class="erow"><span class="etime">11:05-12:00</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S. · Salle 4B</span></div>
+<div class="erow"><span class="etime">10:10-12:00</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S. · Salle 4B</span></div>
 <div class="erow"><span class="etime">12:00-12:55</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">13:45-14:40</span><span class="emat">EDUCATION MUSICALE</span><span class="eprof">FAURE C. · SALLE D'ARTS</span></div>
 <div class="erow"><span class="etime">14:40-15:35</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
@@ -86,438 +91,200 @@ footer { text-align:center; font-size:0.65rem; color:#999; margin-top:16px; padd
 <div class="erow"><span class="etime">12:00-12:55</span><span class="emat">VIE DE CLASSE</span><span class="eprof">LE MASLE C.</span></div>
 <div class="erow"><span class="etime">13:45-16:45</span><span class="emat">ED.PHYSIQUE &amp; SPORT.</span><span class="eprof">CESBRON M. · INST° EXTERIEURE</span></div>
 </div>
-
 <div class="section-title">📝 Devoirs</div>
-<div class="tabs">
-  <button class="tab-btn active" onclick="showTab('devoirs-patxi', this)">Patch</button>
-  <button class="tab-btn" onclick="showTab('devoirs-ju', this)">Ju</button>
-</div>
-<div id="devoirs-patxi" class="tab-panel active">
 <div class="row ">
   <div class="row-top">
-    <span class="matiere patxi">MATHEMATIQUES</span>
+    <span class="matiere">MATHEMATIQUES</span>
     <span class="ddate">jeudi 26/11</span>
   </div>
   <div class="contenu">⬜ Calcul mental Apprendre critère de divisibilité Finir exercice p.75 n° 30, p.76 n° 48 - 54 , p.77 n° 55 - 57 - 66</div>
 </div>
 <div class="row ">
   <div class="row-top">
-    <span class="matiere patxi">ANGLAIS LV1</span>
+    <span class="matiere">ANGLAIS LV1</span>
     <span class="ddate">jeudi 26/11</span>
   </div>
   <div class="contenu">⬜ Terminer les exercices sur le prétérit simple (sauf ceux sur la prononciation)</div>
 </div>
 <div class="row ">
   <div class="row-top">
-    <span class="matiere patxi">EDUCATION MUSICALE</span>
+    <span class="matiere">EDUCATION MUSICALE</span>
     <span class="ddate">jeudi 26/11</span>
   </div>
   <div class="contenu">⬜ Savoir jouer un accord (ex: F#m ou G ou Db...) et savoir jouer la suite d'accords de "Memories" au clavier Revoir le chant et apprendre la suite https://www.onlinepianist.com/virtual-piano/fr</div>
 </div>
 <div class="row ">
   <div class="row-top">
-    <span class="matiere patxi">ANGLAIS LV1</span>
+    <span class="matiere">ANGLAIS LV1</span>
     <span class="ddate">vendredi 27/11</span>
   </div>
   <div class="contenu">⬜ Compléter la webquest sur: soit "population and languages" (de Margot Albert à Lina Ghalleb), soit "History" (de Loris Goussard à Estéban Sarraute) à l'aide du lien suivant : South Africa for Kids | South Africa Facts for Kids | Geography</div>
 </div>
 <div class="row ">
   <div class="row-top">
-    <span class="matiere patxi">HISTOIRE &amp; GEOGRAPH.</span>
+    <span class="matiere">HISTOIRE &amp; GEOGRAPH.</span>
     <span class="ddate">lundi 30/11</span>
   </div>
   <div class="contenu">⬜ Apprendre bilan de géo</div>
 </div>
 <div class="row ">
   <div class="row-top">
-    <span class="matiere patxi">ANGLAIS LV1</span>
+    <span class="matiere">ANGLAIS LV1</span>
     <span class="ddate">lundi 30/11</span>
   </div>
   <div class="contenu">⬜ Apprendre les verbes irréguliers pages 172/173, de Be à Run</div>
 </div>
 <div class="row ">
   <div class="row-top">
-    <span class="matiere patxi">FRANCAIS</span>
+    <span class="matiere">FRANCAIS</span>
     <span class="ddate">lundi 30/11</span>
   </div>
   <div class="contenu">⬜ Contrôle de lecture : - Nouvelles fantastiques et naturalistes de Maupassant ( livre donné en classe !)</div>
 </div>
 <div class="row ">
   <div class="row-top">
-    <span class="matiere patxi">MATHEMATIQUES</span>
+    <span class="matiere">MATHEMATIQUES</span>
     <span class="ddate">jeudi 03/12</span>
   </div>
   <div class="contenu">⬜ DS Fraction</div>
 </div>
 <div class="row ">
   <div class="row-top">
-    <span class="matiere patxi">SCIENCES VIE &amp; TERRE</span>
+    <span class="matiere">SCIENCES VIE &amp; TERRE</span>
     <span class="ddate">mardi 08/12</span>
   </div>
   <div class="contenu">⬜ Apporter tablette chargée</div>
 </div>
+<div class="section-title">📊 Notes (46)</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">ANGLAIS LV1</span>
+    <span class="moy bad">moy. 7.4/20</span>
+  </div>
+  <div class="nchips"><span class="nchip bad" title="Note de participation · 2026-11-17">11/20</span><span class="nchip bad" title="Tâche finale : Show me your shield · 2026-11-05">6/20</span><span class="nchip bad" title="Évaluation de fin de séquence : Show me your shield · 2026-10-16">7/30</span><span class="nchip " title="Questions pour faire connaissance · 2026-09-21">Abs /10</span><span class="nchip bad" title="Flash test sur les villes britanniques · 2026-09-14">4/10</span></div>
 </div>
-<div id="devoirs-ju" class="tab-panel">
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">ARTS PLASTIQUES</span>
+    <span class="moy good">moy. 15.4/20</span>
+  </div>
+  <div class="nchips"><span class="nchip good" title="Investissement / Implication  · 2026-11-19">16/20</span><span class="nchip bad" title="carnet de croquis  · 2026-11-18">5,5/10</span><span class="nchip good" title="Ma maison extraordinaire ( croquis) · 2026-11-14">5/5</span><span class="nchip good" title="Burger de prénom · 2026-11-05">14,5/20</span></div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">ED.PHYSIQUE &amp; SPORT.</span>
+    <span class="moy good">moy. 18.0/20</span>
+  </div>
+  <div class="nchips"><span class="nchip good" title="Volley-ball · 2026-11-18">18/20</span></div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">EDUCATION MUSICALE</span>
+    <span class="moy good">moy. 15.8/20</span>
+  </div>
+  <div class="nchips"><span class="nchip good" title="Test Mm · 2026-11-20">10/10</span><span class="nchip good" title="Projet ostinato · 2026-11-16">8/10</span><span class="nchip good" title="Ch Stand · 2026-11-12">13/20</span><span class="nchip " title="Ch groupe · 2026-10-19">Abs /10</span><span class="nchip bad" title="EE1 · 2026-10-19">10/20</span><span class="nchip good" title="Ostinato · 2026-10-09">10/10</span></div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">ENS. MORAL &amp; CIVIQUE</span>
+    <span class="moy ">moy. 11.2/20</span>
+  </div>
+  <div class="nchips"><span class="nchip bad" title="Evaluation dates séq.1 · 2026-10-14">3,75/10</span><span class="nchip good" title="Evaluation de connaissances N°1 séq.1 · 2026-09-30">7,5/10</span></div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">ESPAGNOL LV2</span>
+    <span class="moy good">moy. 15.0/20</span>
+  </div>
+  <div class="nchips"><span class="nchip good" title="Participation &amp; implication · 2026-11-17">14/20</span><span class="nchip good" title="Projet final séq.1 · 2026-11-10">17/20</span><span class="nchip good" title="Evaluation de connaissances séq.1 · 2026-09-30">14/20</span></div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">FRANCAIS</span>
+    <span class="moy good">moy. 12.2/20</span>
+  </div>
+  <div class="nchips"><span class="nchip good" title="Contrôle triangle d'Aristote · 2026-10-13">12,5/20</span><span class="nchip bad" title="DICTÉE DNB : Louis Aragon · 2026-10-11">4/20</span><span class="nchip " title="Dictée n°2 : Mémoires d'outre-tombe, Chateaubriand · 2026-09-21">Abs /20</span><span class="nchip good" title="" Dire lamour " : éloquence · 2026-09-08">20/20</span></div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">HISTOIRE &amp; GEOGRAPHIE</span>
+    <span class="moy good">moy. 13.3/20</span>
+  </div>
+  <div class="nchips"><span class="nchip good" title="Geo Urbanisation · 2026-11-09">16,5/20</span><span class="nchip bad" title="Eval Esclavage · 2026-10-05">8,5/20</span><span class="nchip good" title="Traite et esclavage groupe · 2026-09-21">15/20</span></div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">LCA LATIN</span>
+    <span class="moy good">moy. 20.0/20</span>
+  </div>
+  <div class="nchips"><span class="nchip good" title="Lecture en latin : accent tonique, prononciation · 2026-10-13">10/10</span><span class="nchip good" title="Le monde des cités grecques : culture gréco-latine · 2026-09-08">20/20</span></div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">MATHEMATIQUES</span>
+    <span class="moy ">moy. 11.6/20</span>
+  </div>
+  <div class="nchips"><span class="nchip good" title="Interro Toussaint · 2026-11-02">4,5/7</span><span class="nchip " title="100 multiplication · 2026-10-15">Abs /100</span><span class="nchip bad" title="DS Nombres relatifs · 2026-10-01">8/20</span><span class="nchip good" title="Interro Flash 1 · 2026-09-24">14/20</span></div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">PHYSIQUE-CHIMIE</span>
+    <span class="moy good">moy. 15.3/20</span>
+  </div>
+  <div class="nchips"><span class="nchip good" title="flash quizz · 2026-11-15">6,7/10</span><span class="nchip " title="Controle 1 · 2026-10-15">Abs /20</span><span class="nchip bad" title="Conversion · 2026-10-07">4/7</span><span class="nchip good" title="ACT: l'air dans la maison de carl · 2026-10-06">9,5/10</span><span class="nchip good" title="Activité 3 Thème 1 · 2026-09-21">13/15</span></div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">SCIENCES VIE &amp; TERRE</span>
+    <span class="moy good">moy. 15.2/20</span>
+  </div>
+  <div class="nchips"><span class="nchip good" title="Chapitre 2 : une cohabitation permanente entre notre corps et les micro-organismes · 2026-11-17">13/20</span><span class="nchip good" title="La commande du mouvement · 2026-09-29">12,5/20</span><span class="nchip good" title="TP : lien anatomique entre l'oeil et le muscle (dissection des nerfs) · 2026-09-15">20/20</span></div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">TECHNOLOGIE</span>
+    <span class="moy good">moy. 18.1/20</span>
+  </div>
+  <div class="nchips"><span class="nchip good" title="Tenue Classeur · 2026-11-16">16/20</span><span class="nchip good" title="Contrôle Connaissances · 2026-11-13">19/20</span><span class="nchip good" title="Travail Groupe de Projet · 2026-10-14">19/20</span><span class="nchip good" title="Besoins et Cahiers des Charges · 2026-09-24">18,5/20</span></div>
+</div>
+</div>
+<div id="child-juliette" class="childview">
+<div class="section-title">📝 Devoirs</div>
 <div class="row ">
   <div class="row-top">
-    <span class="matiere juliette">C</span>
+    <span class="matiere">C</span>
     <span class="ddate">jeudi 26/11</span>
   </div>
   <div class="contenu">⬜ -Mathématiques: calcul : revoir C3+C6 -Grammaire: leçon G2: les types de phrases -Faire signer le lutin noir</div>
 </div>
 <div class="row ">
   <div class="row-top">
-    <span class="matiere juliette">C</span>
+    <span class="matiere">C</span>
     <span class="ddate">vendredi 27/11</span>
   </div>
   <div class="contenu">⬜ -Mathématiques: leçon addition posée C7</div>
 </div>
 <div class="row ">
   <div class="row-top">
-    <span class="matiere juliette">C</span>
+    <span class="matiere">C</span>
     <span class="ddate">lundi 30/11</span>
   </div>
   <div class="contenu">⬜ - RALLYE LECTURE CE1 en ligne: les DOCUMENTAIRES ANIMALIERS A poursuivre -Anglais: QR code+lutin bleu: HIGH FIVE vocabulaire des chiffres jusqu'à 5 le nom des doigts de la main +commencer à apprendre la chanson à son rythme (pas en même temps que la musique trop rapide):écouter, répéter puis chanter sans le support, plus lentement L'apprentissage de l'anglais en CE1 reste essentiellement à l'oral: l'enfant doit reconnaître le mot prononcé à l'oral, le répéter correctement et savoir le traduire du français à l'anglais ou de l'anglais au français. Les fiches données avec des mots écrits aident les parents à accompagner leur enfant. Merci -Dictée: son (o) n°9 mots+phrases</div>
 </div>
 <div class="row ">
   <div class="row-top">
-    <span class="matiere juliette">C</span>
+    <span class="matiere">C</span>
     <span class="ddate">lundi 07/12</span>
   </div>
   <div class="contenu">⬜ -Poésie: poésie choisie du thème "animaux" par coeur</div>
 </div>
 </div>
-
-<div class="section-title">📊 Notes — Patch (46)</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">EDUCATION MUSICALE</span>
-    <span class="nval good">10/10</span>
-  </div>
-  <div class="ndevoir">Test Mm · 2026-11-20</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ARTS PLASTIQUES</span>
-    <span class="nval good">16/20</span>
-  </div>
-  <div class="ndevoir">Investissement / Implication  · 2026-11-19</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ED.PHYSIQUE &amp; SPORT.</span>
-    <span class="nval good">18/20</span>
-  </div>
-  <div class="ndevoir">Volley-ball · 2026-11-18</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ARTS PLASTIQUES</span>
-    <span class="nval bad">5,5/10</span>
-  </div>
-  <div class="ndevoir">carnet de croquis  · 2026-11-18</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">SCIENCES VIE &amp; TERRE</span>
-    <span class="nval good">13/20</span>
-  </div>
-  <div class="ndevoir">Chapitre 2 : une cohabitation permanente entre notre corps et les micro-organismes · 2026-11-17</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ESPAGNOL LV2</span>
-    <span class="nval good">14/20</span>
-  </div>
-  <div class="ndevoir">Participation &amp; implication · 2026-11-17</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ANGLAIS LV1</span>
-    <span class="nval bad">11/20</span>
-  </div>
-  <div class="ndevoir">Note de participation · 2026-11-17</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">EDUCATION MUSICALE</span>
-    <span class="nval good">8/10</span>
-  </div>
-  <div class="ndevoir">Projet ostinato · 2026-11-16</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">TECHNOLOGIE</span>
-    <span class="nval good">16/20</span>
-  </div>
-  <div class="ndevoir">Tenue Classeur · 2026-11-16</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">PHYSIQUE-CHIMIE</span>
-    <span class="nval good">6,7/10</span>
-  </div>
-  <div class="ndevoir">flash quizz · 2026-11-15</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ARTS PLASTIQUES</span>
-    <span class="nval good">5/5</span>
-  </div>
-  <div class="ndevoir">Ma maison extraordinaire ( croquis) · 2026-11-14</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">TECHNOLOGIE</span>
-    <span class="nval good">19/20</span>
-  </div>
-  <div class="ndevoir">Contrôle Connaissances · 2026-11-13</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">EDUCATION MUSICALE</span>
-    <span class="nval good">13/20</span>
-  </div>
-  <div class="ndevoir">Ch Stand · 2026-11-12</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ESPAGNOL LV2</span>
-    <span class="nval good">17/20</span>
-  </div>
-  <div class="ndevoir">Projet final séq.1 · 2026-11-10</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">HISTOIRE &amp; GEOGRAPHIE</span>
-    <span class="nval good">16,5/20</span>
-  </div>
-  <div class="ndevoir">Geo Urbanisation · 2026-11-09</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ARTS PLASTIQUES</span>
-    <span class="nval good">14,5/20</span>
-  </div>
-  <div class="ndevoir">Burger de prénom · 2026-11-05</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ANGLAIS LV1</span>
-    <span class="nval bad">6/20</span>
-  </div>
-  <div class="ndevoir">Tâche finale : Show me your shield · 2026-11-05</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">MATHEMATIQUES</span>
-    <span class="nval good">4,5/7</span>
-  </div>
-  <div class="ndevoir">Interro Toussaint · 2026-11-02</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">EDUCATION MUSICALE</span>
-    <span class="nval ">Abs /10</span>
-  </div>
-  <div class="ndevoir">Ch groupe · 2026-10-19</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">EDUCATION MUSICALE</span>
-    <span class="nval bad">10/20</span>
-  </div>
-  <div class="ndevoir">EE1 · 2026-10-19</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ANGLAIS LV1</span>
-    <span class="nval bad">7/30</span>
-  </div>
-  <div class="ndevoir">Évaluation de fin de séquence : Show me your shield · 2026-10-16</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">PHYSIQUE-CHIMIE</span>
-    <span class="nval ">Abs /20</span>
-  </div>
-  <div class="ndevoir">Controle 1 · 2026-10-15</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">MATHEMATIQUES</span>
-    <span class="nval ">Abs /100</span>
-  </div>
-  <div class="ndevoir">100 multiplication · 2026-10-15</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">TECHNOLOGIE</span>
-    <span class="nval good">19/20</span>
-  </div>
-  <div class="ndevoir">Travail Groupe de Projet · 2026-10-14</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ENS. MORAL &amp; CIVIQUE</span>
-    <span class="nval bad">3,75/10</span>
-  </div>
-  <div class="ndevoir">Evaluation dates séq.1 · 2026-10-14</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">FRANCAIS</span>
-    <span class="nval good">12,5/20</span>
-  </div>
-  <div class="ndevoir">Contrôle triangle d'Aristote · 2026-10-13</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">LCA LATIN</span>
-    <span class="nval good">10/10</span>
-  </div>
-  <div class="ndevoir">Lecture en latin : accent tonique, prononciation · 2026-10-13</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">FRANCAIS</span>
-    <span class="nval bad">4/20</span>
-  </div>
-  <div class="ndevoir">DICTÉE DNB : Louis Aragon · 2026-10-11</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">EDUCATION MUSICALE</span>
-    <span class="nval good">10/10</span>
-  </div>
-  <div class="ndevoir">Ostinato · 2026-10-09</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">PHYSIQUE-CHIMIE</span>
-    <span class="nval bad">4/7</span>
-  </div>
-  <div class="ndevoir">Conversion · 2026-10-07</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">PHYSIQUE-CHIMIE</span>
-    <span class="nval good">9,5/10</span>
-  </div>
-  <div class="ndevoir">ACT: l'air dans la maison de carl · 2026-10-06</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">HISTOIRE &amp; GEOGRAPHIE</span>
-    <span class="nval bad">8,5/20</span>
-  </div>
-  <div class="ndevoir">Eval Esclavage · 2026-10-05</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">MATHEMATIQUES</span>
-    <span class="nval bad">8/20</span>
-  </div>
-  <div class="ndevoir">DS Nombres relatifs · 2026-10-01</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ESPAGNOL LV2</span>
-    <span class="nval good">14/20</span>
-  </div>
-  <div class="ndevoir">Evaluation de connaissances séq.1 · 2026-09-30</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ENS. MORAL &amp; CIVIQUE</span>
-    <span class="nval good">7,5/10</span>
-  </div>
-  <div class="ndevoir">Evaluation de connaissances N°1 séq.1 · 2026-09-30</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">SCIENCES VIE &amp; TERRE</span>
-    <span class="nval good">12,5/20</span>
-  </div>
-  <div class="ndevoir">La commande du mouvement · 2026-09-29</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">TECHNOLOGIE</span>
-    <span class="nval good">18,5/20</span>
-  </div>
-  <div class="ndevoir">Besoins et Cahiers des Charges · 2026-09-24</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">MATHEMATIQUES</span>
-    <span class="nval good">14/20</span>
-  </div>
-  <div class="ndevoir">Interro Flash 1 · 2026-09-24</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">FRANCAIS</span>
-    <span class="nval ">Abs /20</span>
-  </div>
-  <div class="ndevoir">Dictée n°2 : Mémoires d'outre-tombe, Chateaubriand · 2026-09-21</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">HISTOIRE &amp; GEOGRAPHIE</span>
-    <span class="nval good">15/20</span>
-  </div>
-  <div class="ndevoir">Traite et esclavage groupe · 2026-09-21</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ANGLAIS LV1</span>
-    <span class="nval ">Abs /10</span>
-  </div>
-  <div class="ndevoir">Questions pour faire connaissance · 2026-09-21</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">PHYSIQUE-CHIMIE</span>
-    <span class="nval good">13/15</span>
-  </div>
-  <div class="ndevoir">Activité 3 Thème 1 · 2026-09-21</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">SCIENCES VIE &amp; TERRE</span>
-    <span class="nval good">20/20</span>
-  </div>
-  <div class="ndevoir">TP : lien anatomique entre l'oeil et le muscle (dissection des nerfs) · 2026-09-15</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">ANGLAIS LV1</span>
-    <span class="nval bad">4/10</span>
-  </div>
-  <div class="ndevoir">Flash test sur les villes britanniques · 2026-09-14</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">FRANCAIS</span>
-    <span class="nval good">20/20</span>
-  </div>
-  <div class="ndevoir">" Dire lamour " : éloquence · 2026-09-08</div>
-</div>
-<div class="nrow">
-  <div class="nrow-top">
-    <span class="nmatiere">LCA LATIN</span>
-    <span class="nval good">20/20</span>
-  </div>
-  <div class="ndevoir">Le monde des cités grecques : culture gréco-latine · 2026-09-08</div>
-</div>
-
-<footer>Suivi automatique privé — ne pas partager ce lien</footer>
+<footer>Suivi automatique — ne pas partager ce lien</footer>
 </div>
 <script>
-function showTab(id, btn) {
-  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+function showChild(id, btn) {
+  document.querySelectorAll('.childview').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.childtab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   btn.classList.add('active');
 }
