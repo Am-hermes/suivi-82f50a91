@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Suivi scolaire</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; margin:0; padding:0; background:#eeeeee; color:#1a1a1a; max-width:600px; margin-left:auto; margin-right:auto; font-size:14px; }
+.hero { background:linear-gradient(135deg, #1a1a1a 0%, #4d4d4d 100%); color:white; padding:16px; border-radius:0 0 18px 18px; margin-bottom:12px; box-shadow:0 2px 10px rgba(0,0,0,0.25); }
+.hero h1 { font-size: 1.2rem; margin: 0 0 2px 0; font-weight:800; }
+.hero .updated { font-size: 0.7rem; color:rgba(255,255,255,0.8); }
+.content { padding: 0 10px 14px 10px; }
+.section-title { font-size:0.85rem; font-weight:800; color:#333; margin:16px 2px 8px 2px; padding-top:10px; border-top:1px dashed #ccc; text-transform:uppercase; letter-spacing:0.03em; }
+.row { background:white; border-radius:10px; padding:8px 11px; margin-bottom:6px; box-shadow:0 1px 3px rgba(0,0,0,0.08); }
+.row.done { opacity:0.5; }
+.row-top { display:flex; align-items:center; justify-content:space-between; gap:6px; }
+.matiere { font-size:0.78rem; font-weight:700; padding:2px 7px; border-radius:5px; }
+.matiere.patxi { background:#1a1a1a; color:#fff; }
+.matiere.juliette { background:#e8d9c3; color:#5a3d1a; }
+.ddate { font-size:0.7rem; color:#999; font-weight:600; }
+.contenu { font-size:0.82rem; color:#333; margin-top:5px; line-height:1.4; }
+.nrow { background:white; border-radius:10px; padding:7px 11px; margin-bottom:5px; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+.nrow-top { display:flex; justify-content:space-between; align-items:center; }
+.nmatiere { font-size:0.8rem; font-weight:600; }
+.nval { font-weight:800; font-size:0.85rem; padding:1px 8px; border-radius:6px; background:#eee; }
+.nval.good { background:#d4f0d4; color:#1a6b1a; }
+.nval.bad { background:#f8d7da; color:#a4282f; }
+.ndevoir { font-size:0.7rem; color:#888; margin-top:2px; }
+.eday { background:white; border-radius:10px; padding:8px 11px; margin-bottom:6px; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+.eday-title { font-size:0.78rem; font-weight:800; color:#1a1a1a; margin-bottom:5px; text-transform:capitalize; }
+.erow { display:flex; gap:8px; font-size:0.78rem; padding:2px 0; border-bottom:1px solid #f2f2f2; }
+.erow:last-child { border-bottom:none; }
+.etime { font-weight:700; color:#555; min-width:70px; }
+.emat { flex:1; font-weight:600; }
+.eprof { color:#999; font-size:0.72rem; }
+footer { text-align:center; font-size:0.65rem; color:#999; margin-top:16px; padding-bottom:12px; }
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>📚 Suivi scolaire</h1>
+  <div class="updated">Mise à jour : 25/11/2026 à 19h55</div>
+</div>
+<div class="content">
+<div class="section-title">🗓️ Emploi du temps — Patch</div>
+<div class="eday"><div class="eday-title">lundi 23/11</div><div class="erow"><span class="etime">08:00-08:55</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S.</span></div>
+<div class="erow"><span class="etime">10:10-11:05</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S. · Salle 4B</span></div>
+<div class="erow"><span class="etime">11:05-12:00</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
+<div class="erow"><span class="etime">12:00-12:55</span><span class="emat">LCA LATIN</span><span class="eprof">MANNINO C.</span></div>
+<div class="erow"><span class="etime">13:45-14:40</span><span class="emat">HISTOIRE &amp; GEOGRAPH.</span><span class="eprof">PLATANIA F. · Salle 4B</span></div>
+<div class="erow"><span class="etime">14:40-15:35</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
+<div class="erow"><span class="etime">15:50-16:45</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
+</div>
+<div class="eday"><div class="eday-title">mardi 24/11</div><div class="erow"><span class="etime">08:55-09:50</span><span class="emat">HISTOIRE &amp; GEOGRAPH.</span><span class="eprof">PLATANIA F. · Salle 4B</span></div>
+<div class="erow"><span class="etime">10:10-11:05</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C.</span></div>
+<div class="erow"><span class="etime">11:05-12:00</span><span class="emat">ESPAGNOL LV2</span><span class="eprof">QUERO  M. · Salle 4A</span></div>
+<div class="erow"><span class="etime">13:45-14:40</span><span class="emat">ESPAGNOL LV2</span><span class="eprof">QUERO  M. · Salle 4A</span></div>
+<div class="erow"><span class="etime">14:40-15:35</span><span class="emat">SCIENCES VIE &amp; TERRE</span><span class="eprof">LE ROND  S. · Salle 4B</span></div>
+<div class="erow"><span class="etime">15:50-16:45</span><span class="emat">LCA LATIN</span><span class="eprof">MANNINO C.</span></div>
+</div>
+<div class="eday"><div class="eday-title">mercredi 25/11</div><div class="erow"><span class="etime">08:55-09:50</span><span class="emat">ENS. MORAL &amp; CIVIQUE</span><span class="eprof">QUERO  M.</span></div>
+<div class="erow"><span class="etime">10:10-11:05</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
+<div class="erow"><span class="etime">11:05-12:00</span><span class="emat">ESPAGNOL LV2</span><span class="eprof">QUERO  M. · Salle 4A</span></div>
+</div>
+<div class="eday"><div class="eday-title">jeudi 26/11</div><div class="erow"><span class="etime">08:00-08:55</span><span class="emat">CULTURE RELIGIEUSE</span><span class="eprof">ALLIONE D. · Salle 4B</span></div>
+<div class="erow"><span class="etime">08:55-09:50</span><span class="emat">PHYSIQUE-CHIMIE</span><span class="eprof">LAGIER M. · Salle 4B</span></div>
+<div class="erow"><span class="etime">10:10-11:05</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S. · Salle 4B</span></div>
+<div class="erow"><span class="etime">11:05-12:00</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S. · Salle 4B</span></div>
+<div class="erow"><span class="etime">12:00-12:55</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
+<div class="erow"><span class="etime">13:45-14:40</span><span class="emat">EDUCATION MUSICALE</span><span class="eprof">FAURE C. · SALLE D'ARTS</span></div>
+<div class="erow"><span class="etime">14:40-15:35</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
+</div>
+<div class="eday"><div class="eday-title">vendredi 27/11</div><div class="erow"><span class="etime">08:00-08:55</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
+<div class="erow"><span class="etime">08:55-09:50</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
+<div class="erow"><span class="etime">10:10-11:05</span><span class="emat">TECHNOLOGIE</span><span class="eprof">ESPARIAT  C. · Salle 4B</span></div>
+<div class="erow"><span class="etime">11:05-12:00</span><span class="emat">ARTS PLASTIQUES</span><span class="eprof">CAMELIA G. · SALLE D'ARTS</span></div>
+<div class="erow"><span class="etime">12:00-12:55</span><span class="emat">VIE DE CLASSE</span><span class="eprof">LE MASLE C.</span></div>
+<div class="erow"><span class="etime">13:45-16:45</span><span class="emat">ED.PHYSIQUE &amp; SPORT.</span><span class="eprof">CESBRON M. · INST° EXTERIEURE</span></div>
+</div>
+
+<div class="section-title">📝 Devoirs — Patch</div>
+<div class="row ">
+  <div class="row-top">
+    <span class="matiere patxi">MATHEMATIQUES</span>
+    <span class="ddate">jeudi 26/11</span>
+  </div>
+  <div class="contenu">⬜ Calcul mental Apprendre critère de divisibilité Finir exercice p.75 n° 30, p.76 n° 48 - 54 , p.77 n° 55 - 57 - 66</div>
+</div>
+<div class="row ">
+  <div class="row-top">
+    <span class="matiere patxi">ANGLAIS LV1</span>
+    <span class="ddate">jeudi 26/11</span>
+  </div>
+  <div class="contenu">⬜ Terminer les exercices sur le prétérit simple (sauf ceux sur la prononciation)</div>
+</div>
+<div class="row ">
+  <div class="row-top">
+    <span class="matiere patxi">EDUCATION MUSICALE</span>
+    <span class="ddate">jeudi 26/11</span>
+  </div>
+  <div class="contenu">⬜ Savoir jouer un accord (ex: F#m ou G ou Db...) et savoir jouer la suite d'accords de "Memories" au clavier Revoir le chant et apprendre la suite https://www.onlinepianist.com/virtual-piano/fr</div>
+</div>
+<div class="row ">
+  <div class="row-top">
+    <span class="matiere patxi">ANGLAIS LV1</span>
+    <span class="ddate">vendredi 27/11</span>
+  </div>
+  <div class="contenu">⬜ Compléter la webquest sur: soit "population and languages" (de Margot Albert à Lina Ghalleb), soit "History" (de Loris Goussard à Estéban Sarraute) à l'aide du lien suivant : South Africa for Kids | South Africa Facts for Kids | Geography</div>
+</div>
+<div class="row ">
+  <div class="row-top">
+    <span class="matiere patxi">HISTOIRE &amp; GEOGRAPH.</span>
+    <span class="ddate">lundi 30/11</span>
+  </div>
+  <div class="contenu">⬜ Apprendre bilan de géo</div>
+</div>
+<div class="row ">
+  <div class="row-top">
+    <span class="matiere patxi">ANGLAIS LV1</span>
+    <span class="ddate">lundi 30/11</span>
+  </div>
+  <div class="contenu">⬜ Apprendre les verbes irréguliers pages 172/173, de Be à Run</div>
+</div>
+<div class="row ">
+  <div class="row-top">
+    <span class="matiere patxi">FRANCAIS</span>
+    <span class="ddate">lundi 30/11</span>
+  </div>
+  <div class="contenu">⬜ Contrôle de lecture : - Nouvelles fantastiques et naturalistes de Maupassant ( livre donné en classe !)</div>
+</div>
+<div class="row ">
+  <div class="row-top">
+    <span class="matiere patxi">MATHEMATIQUES</span>
+    <span class="ddate">jeudi 03/12</span>
+  </div>
+  <div class="contenu">⬜ DS Fraction</div>
+</div>
+<div class="row ">
+  <div class="row-top">
+    <span class="matiere patxi">SCIENCES VIE &amp; TERRE</span>
+    <span class="ddate">mardi 08/12</span>
+  </div>
+  <div class="contenu">⬜ Apporter tablette chargée</div>
+</div>
+
+<div class="section-title">📝 Devoirs — Ju</div>
+<div class="row ">
+  <div class="row-top">
+    <span class="matiere juliette">C</span>
+    <span class="ddate">jeudi 26/11</span>
+  </div>
+  <div class="contenu">⬜ -Mathématiques: calcul : revoir C3+C6 -Grammaire: leçon G2: les types de phrases -Faire signer le lutin noir</div>
+</div>
+<div class="row ">
+  <div class="row-top">
+    <span class="matiere juliette">C</span>
+    <span class="ddate">vendredi 27/11</span>
+  </div>
+  <div class="contenu">⬜ -Mathématiques: leçon addition posée C7</div>
+</div>
+<div class="row ">
+  <div class="row-top">
+    <span class="matiere juliette">C</span>
+    <span class="ddate">lundi 30/11</span>
+  </div>
+  <div class="contenu">⬜ - RALLYE LECTURE CE1 en ligne: les DOCUMENTAIRES ANIMALIERS A poursuivre -Anglais: QR code+lutin bleu: HIGH FIVE vocabulaire des chiffres jusqu'à 5 le nom des doigts de la main +commencer à apprendre la chanson à son rythme (pas en même temps que la musique trop rapide):écouter, répéter puis chanter sans le support, plus lentement L'apprentissage de l'anglais en CE1 reste essentiellement à l'oral: l'enfant doit reconnaître le mot prononcé à l'oral, le répéter correctement et savoir le traduire du français à l'anglais ou de l'anglais au français. Les fiches données avec des mots écrits aident les parents à accompagner leur enfant. Merci -Dictée: son (o) n°9 mots+phrases</div>
+</div>
+<div class="row ">
+  <div class="row-top">
+    <span class="matiere juliette">C</span>
+    <span class="ddate">lundi 07/12</span>
+  </div>
+  <div class="contenu">⬜ -Poésie: poésie choisie du thème "animaux" par coeur</div>
+</div>
+
+<div class="section-title">📊 Notes — Patch</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">EDUCATION MUSICALE</span>
+    <span class="nval good">10/10</span>
+  </div>
+  <div class="ndevoir">Test Mm · 2026-11-20</div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">ARTS PLASTIQUES</span>
+    <span class="nval good">16/20</span>
+  </div>
+  <div class="ndevoir">Investissement / Implication  · 2026-11-19</div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">ARTS PLASTIQUES</span>
+    <span class="nval bad">5,5/10</span>
+  </div>
+  <div class="ndevoir">carnet de croquis  · 2026-11-18</div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">ED.PHYSIQUE &amp; SPORT.</span>
+    <span class="nval good">18/20</span>
+  </div>
+  <div class="ndevoir">Volley-ball · 2026-11-18</div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">ANGLAIS LV1</span>
+    <span class="nval bad">11/20</span>
+  </div>
+  <div class="ndevoir">Note de participation · 2026-11-17</div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">ESPAGNOL LV2</span>
+    <span class="nval good">14/20</span>
+  </div>
+  <div class="ndevoir">Participation &amp; implication · 2026-11-17</div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">SCIENCES VIE &amp; TERRE</span>
+    <span class="nval good">13/20</span>
+  </div>
+  <div class="ndevoir">Chapitre 2 : une cohabitation permanente entre notre corps et les micro-organismes · 2026-11-17</div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">TECHNOLOGIE</span>
+    <span class="nval good">16/20</span>
+  </div>
+  <div class="ndevoir">Tenue Classeur · 2026-11-16</div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">EDUCATION MUSICALE</span>
+    <span class="nval good">8/10</span>
+  </div>
+  <div class="ndevoir">Projet ostinato · 2026-11-16</div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">PHYSIQUE-CHIMIE</span>
+    <span class="nval good">6,7/10</span>
+  </div>
+  <div class="ndevoir">flash quizz · 2026-11-15</div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">ARTS PLASTIQUES</span>
+    <span class="nval good">5/5</span>
+  </div>
+  <div class="ndevoir">Ma maison extraordinaire ( croquis) · 2026-11-14</div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">TECHNOLOGIE</span>
+    <span class="nval good">19/20</span>
+  </div>
+  <div class="ndevoir">Contrôle Connaissances · 2026-11-13</div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">EDUCATION MUSICALE</span>
+    <span class="nval good">13/20</span>
+  </div>
+  <div class="ndevoir">Ch Stand · 2026-11-12</div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">ESPAGNOL LV2</span>
+    <span class="nval good">17/20</span>
+  </div>
+  <div class="ndevoir">Projet final séq.1 · 2026-11-10</div>
+</div>
+<div class="nrow">
+  <div class="nrow-top">
+    <span class="nmatiere">HISTOIRE &amp; GEOGRAPHIE</span>
+    <span class="nval good">16,5/20</span>
+  </div>
+  <div class="ndevoir">Geo Urbanisation · 2026-11-09</div>
+</div>
+
+<footer>Suivi automatique privé — ne pas partager ce lien</footer>
+</div>
+</body>
+</html>
