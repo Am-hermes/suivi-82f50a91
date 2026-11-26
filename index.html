@@ -50,6 +50,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
 .eday-range { font-size:0.72rem; font-weight:700; color:#fff; background:#2b3990; padding:2px 8px; border-radius:6px; text-transform:none; }
 .erow { display:flex; gap:8px; font-size:0.78rem; padding:2px 0; border-bottom:1px solid #f2f2f6; }
 .erow:last-child { border-bottom:none; }
+.erow.pause { color:#aaa; font-style:italic; }
+.erow.pause .etime { color:#bbb; }
 .etime { font-weight:700; color:#555; min-width:70px; }
 .emat { flex:1; font-weight:600; }
 .eprof { color:#999; font-size:0.72rem; }
@@ -63,7 +65,7 @@ footer { text-align:center; font-size:0.65rem; color:#999; margin-top:16px; padd
     <img src="logo.png" alt="AM" class="logo">
     <h1>📚 Suivi scolaire</h1>
   </div>
-  <div class="updated">Mise à jour : 26/11/2026 à 09h06</div>
+  <div class="updated">Mise à jour : 26/11/2026 à 09h33</div>
   <div class="childtabs">
     <button class="childtab-btn active" onclick="showChild('child-patxi', this)">Patxi</button>
     <button class="childtab-btn" onclick="showChild('child-juliette', this)">Juliette</button>
@@ -80,24 +82,24 @@ footer { text-align:center; font-size:0.65rem; color:#999; margin-top:16px; padd
 <div class="erow"><span class="etime">08:55-09:50</span><span class="emat">PHYSIQUE-CHIMIE</span><span class="eprof">LAGIER M. · Salle 4B</span></div>
 <div class="erow"><span class="etime">10:10-12:00</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S. · Salle 4B</span></div>
 <div class="erow"><span class="etime">12:00-12:55</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
-<div class="erow"><span class="etime">12:55-13:45</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">12:55-13:45</span><span class="emat">Pause</span></div>
 <div class="erow"><span class="etime">13:45-14:40</span><span class="emat">EDUCATION MUSICALE</span><span class="eprof">FAURE C. · SALLE D'ARTS</span></div>
 <div class="erow"><span class="etime">14:40-15:35</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
-<div class="erow"><span class="etime">15:35-17:00</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">15:35-17:00</span><span class="emat">Pause</span></div>
 </div>
 <div class="eday"><div class="eday-title">vendredi 27/11 <span class="eday-range">08:00 - 16:45</span></div><div class="erow"><span class="etime">08:00-08:55</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">08:55-09:50</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">10:10-11:05</span><span class="emat">TECHNOLOGIE</span><span class="eprof">ESPARIAT  C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">11:05-12:00</span><span class="emat">ARTS PLASTIQUES</span><span class="eprof">CAMELIA G. · SALLE D'ARTS</span></div>
 <div class="erow"><span class="etime">12:00-12:55</span><span class="emat">VIE DE CLASSE</span><span class="eprof">LE MASLE C.</span></div>
-<div class="erow"><span class="etime">12:55-13:45</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">12:55-13:45</span><span class="emat">Pause</span></div>
 <div class="erow"><span class="etime">13:45-16:45</span><span class="emat">ED.PHYSIQUE &amp; SPORT.</span><span class="eprof">CESBRON M. · INST° EXTERIEURE</span></div>
 </div>
-<div class="eday"><div class="eday-title">lundi 30/11 <span class="eday-range">08:00 - 16:45</span></div><div class="erow"><span class="etime">08:00-10:10</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="eday"><div class="eday-title">lundi 30/11 <span class="eday-range">08:00 - 16:45</span></div><div class="erow pause"><span class="etime">08:00-10:10</span><span class="emat">Pause</span></div>
 <div class="erow"><span class="etime">10:10-11:05</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S. · Salle 4B</span></div>
 <div class="erow"><span class="etime">11:05-12:00</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">12:00-12:55</span><span class="emat">LCA LATIN</span><span class="eprof">MANNINO C.</span></div>
-<div class="erow"><span class="etime">12:55-13:45</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">12:55-13:45</span><span class="emat">Pause</span></div>
 <div class="erow"><span class="etime">13:45-14:40</span><span class="emat">HISTOIRE &amp; GEOGRAPH.</span><span class="eprof">PLATANIA F. · Salle 4B</span></div>
 <div class="erow"><span class="etime">14:40-15:35</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">15:50-16:45</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
@@ -106,7 +108,7 @@ footer { text-align:center; font-size:0.65rem; color:#999; margin-top:16px; padd
 <div class="erow"><span class="etime">10:10-11:05</span><span class="emat">#NAH</span><span class="eprof">LE ROND  S.</span></div>
 <div class="erow"><span class="etime">11:05-12:00</span><span class="emat">#NAH</span><span class="eprof">QUERO  M.</span></div>
 <div class="erow"><span class="etime">11:05-12:00</span><span class="emat">#NAH</span><span class="eprof">MARTILLI M.</span></div>
-<div class="erow"><span class="etime">12:00-13:45</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">12:00-13:45</span><span class="emat">Pause</span></div>
 <div class="erow"><span class="etime">13:45-14:40</span><span class="emat">ESPAGNOL LV2</span><span class="eprof">QUERO  M. · Salle 4A</span></div>
 <div class="erow"><span class="etime">14:40-15:35</span><span class="emat">SCIENCES VIE &amp; TERRE</span><span class="eprof">LE ROND  S. · Salle 4B</span></div>
 <div class="erow"><span class="etime">15:50-16:45</span><span class="emat">LCA LATIN</span><span class="eprof">MANNINO C.</span></div>
@@ -114,57 +116,57 @@ footer { text-align:center; font-size:0.65rem; color:#999; margin-top:16px; padd
 <div class="eday"><div class="eday-title">mercredi 02/12 <span class="eday-range">08:00 - 17:00</span></div><div class="erow"><span class="etime">08:00-08:55</span><span class="emat">PHYSIQUE-CHIMIE</span><span class="eprof">LAGIER M.</span></div>
 <div class="erow"><span class="etime">08:55-09:50</span><span class="emat">TECHNOLOGIE</span><span class="eprof">ESPARIAT  C.</span></div>
 <div class="erow"><span class="etime">10:10-11:05</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
-<div class="erow"><span class="etime">11:05-17:00</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">11:05-17:00</span><span class="emat">Pause</span></div>
 </div>
-<div class="eday"><div class="eday-title">jeudi 03/12 <span class="eday-range">08:00 - 17:00</span></div><div class="erow"><span class="etime">08:00-08:55</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="eday"><div class="eday-title">jeudi 03/12 <span class="eday-range">08:00 - 17:00</span></div><div class="erow pause"><span class="etime">08:00-08:55</span><span class="emat">Pause</span></div>
 <div class="erow"><span class="etime">08:55-09:50</span><span class="emat">PHYSIQUE-CHIMIE</span><span class="eprof">LAGIER M. · Salle 4B</span></div>
 <div class="erow"><span class="etime">10:10-12:00</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S. · Salle 4B</span></div>
 <div class="erow"><span class="etime">12:00-12:55</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
-<div class="erow"><span class="etime">12:55-13:45</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">12:55-13:45</span><span class="emat">Pause</span></div>
 <div class="erow"><span class="etime">13:45-14:40</span><span class="emat">EDUCATION MUSICALE</span><span class="eprof">FAURE C. · SALLE D'ARTS</span></div>
 <div class="erow"><span class="etime">14:40-15:35</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
-<div class="erow"><span class="etime">15:35-17:00</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">15:35-17:00</span><span class="emat">Pause</span></div>
 </div>
 <div class="eday"><div class="eday-title">vendredi 04/12 <span class="eday-range">08:00 - 16:45</span></div><div class="erow"><span class="etime">08:00-08:55</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">08:55-09:50</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">10:10-11:05</span><span class="emat">TECHNOLOGIE</span><span class="eprof">ESPARIAT  C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">11:05-12:00</span><span class="emat">ARTS PLASTIQUES</span><span class="eprof">CAMELIA G. · SALLE D'ARTS</span></div>
-<div class="erow"><span class="etime">12:00-13:45</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">12:00-13:45</span><span class="emat">Pause</span></div>
 <div class="erow"><span class="etime">13:45-16:45</span><span class="emat">ED.PHYSIQUE &amp; SPORT.</span><span class="eprof">CESBRON M. · INST° EXTERIEURE</span></div>
 </div>
 <div class="eday"><div class="eday-title">lundi 07/12 <span class="eday-range">08:00 - 16:45</span></div><div class="erow"><span class="etime">08:00-08:55</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S.</span></div>
-<div class="erow"><span class="etime">08:55-10:10</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">08:55-10:10</span><span class="emat">Pause</span></div>
 <div class="erow"><span class="etime">10:10-11:05</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S. · Salle 4B</span></div>
 <div class="erow"><span class="etime">11:05-12:00</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">12:00-12:55</span><span class="emat">LCA LATIN</span><span class="eprof">MANNINO C.</span></div>
-<div class="erow"><span class="etime">12:55-13:45</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">12:55-13:45</span><span class="emat">Pause</span></div>
 <div class="erow"><span class="etime">13:45-14:40</span><span class="emat">HISTOIRE &amp; GEOGRAPH.</span><span class="eprof">PLATANIA F. · Salle 4B</span></div>
 <div class="erow"><span class="etime">14:40-15:35</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">15:50-16:45</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
 </div>
-<div class="eday"><div class="eday-title">mardi 08/12 <span class="eday-range">08:00 - 16:45</span></div><div class="erow"><span class="etime">08:00-08:55</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="eday"><div class="eday-title">mardi 08/12 <span class="eday-range">08:00 - 16:45</span></div><div class="erow pause"><span class="etime">08:00-08:55</span><span class="emat">Pause</span></div>
 <div class="erow"><span class="etime">08:55-09:50</span><span class="emat">HISTOIRE &amp; GEOGRAPH.</span><span class="eprof">PLATANIA F. · Salle 4B</span></div>
 <div class="erow"><span class="etime">10:10-11:05</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C.</span></div>
 <div class="erow"><span class="etime">11:05-12:00</span><span class="emat">ESPAGNOL LV2</span><span class="eprof">QUERO  M. · Salle 4A</span></div>
-<div class="erow"><span class="etime">12:00-13:45</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">12:00-13:45</span><span class="emat">Pause</span></div>
 <div class="erow"><span class="etime">13:45-14:40</span><span class="emat">ESPAGNOL LV2</span><span class="eprof">QUERO  M. · Salle 4A</span></div>
 <div class="erow"><span class="etime">14:40-15:35</span><span class="emat">SCIENCES VIE &amp; TERRE</span><span class="eprof">LE ROND  S. · Salle 4B</span></div>
 <div class="erow"><span class="etime">15:50-16:45</span><span class="emat">LCA LATIN</span><span class="eprof">MANNINO C.</span></div>
 </div>
-<div class="eday"><div class="eday-title">mercredi 09/12 <span class="eday-range">08:00 - 17:00</span></div><div class="erow"><span class="etime">08:00-08:55</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="eday"><div class="eday-title">mercredi 09/12 <span class="eday-range">08:00 - 17:00</span></div><div class="erow pause"><span class="etime">08:00-08:55</span><span class="emat">Pause</span></div>
 <div class="erow"><span class="etime">08:55-09:50</span><span class="emat">ENS. MORAL &amp; CIVIQUE</span><span class="eprof">QUERO  M.</span></div>
 <div class="erow"><span class="etime">10:10-11:05</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">11:05-12:00</span><span class="emat">ESPAGNOL LV2</span><span class="eprof">QUERO  M. · Salle 4A</span></div>
-<div class="erow"><span class="etime">12:00-17:00</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">12:00-17:00</span><span class="emat">Pause</span></div>
 </div>
 <div class="eday"><div class="eday-title">jeudi 10/12 <span class="eday-range">08:00 - 17:00</span></div><div class="erow"><span class="etime">08:00-08:55</span><span class="emat">CULTURE RELIGIEUSE</span><span class="eprof">ALLIONE D. · Salle 4B</span></div>
 <div class="erow"><span class="etime">08:55-09:50</span><span class="emat">PHYSIQUE-CHIMIE</span><span class="eprof">LAGIER M. · Salle 4B</span></div>
 <div class="erow"><span class="etime">10:10-12:00</span><span class="emat">MATHEMATIQUES</span><span class="eprof">BELLUMORE S. · Salle 4B</span></div>
 <div class="erow"><span class="etime">12:00-12:55</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
-<div class="erow"><span class="etime">12:55-13:45</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">12:55-13:45</span><span class="emat">Pause</span></div>
 <div class="erow"><span class="etime">13:45-14:40</span><span class="emat">EDUCATION MUSICALE</span><span class="eprof">FAURE C. · SALLE D'ARTS</span></div>
 <div class="erow"><span class="etime">14:40-15:35</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
-<div class="erow"><span class="etime">15:35-17:00</span><span class="emat">Pas de cours</span><span class="eprof">  ·  </span></div>
+<div class="erow pause"><span class="etime">15:35-17:00</span><span class="emat">Pause</span></div>
 </div>
 <div class="section-title" id="devoirs-Patxi">📝 Devoirs</div>
 <div class="row ">
