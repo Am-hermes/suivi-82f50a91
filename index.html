@@ -52,6 +52,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
 .erow:last-child { border-bottom:none; }
 .erow.pause { color:#aaa; font-style:italic; }
 .erow.pause .etime { color:#bbb; }
+.erow.cancelled { color:#c0392b; text-decoration:line-through; opacity:0.75; }
+.erow.cancelled .etime { color:#c0392b; }
 .etime { font-weight:700; color:#555; min-width:70px; }
 .emat { flex:1; font-weight:600; }
 .eprof { color:#999; font-size:0.72rem; }
@@ -65,7 +67,7 @@ footer { text-align:center; font-size:0.65rem; color:#999; margin-top:16px; padd
     <img src="logo.png" alt="AM" class="logo">
     <h1>📚 Suivi scolaire</h1>
   </div>
-  <div class="updated">Mise à jour : 26/11/2026 à 18h03</div>
+  <div class="updated">Mise à jour : 26/11/2026 à 20h29</div>
   <div class="childtabs">
     <button class="childtab-btn active" onclick="showChild('child-patxi', this)">Patxi</button>
     <button class="childtab-btn" onclick="showChild('child-juliette', this)">Juliette</button>
@@ -87,7 +89,7 @@ footer { text-align:center; font-size:0.65rem; color:#999; margin-top:16px; padd
 <div class="erow"><span class="etime">14:40-15:35</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
 <div class="erow pause"><span class="etime">15:35-17:00</span><span class="emat">Pause</span></div>
 </div>
-<div class="eday"><div class="eday-title">vendredi 27/11 <span class="eday-range">08:00 - 16:45</span></div><div class="erow"><span class="etime">08:00-08:55</span><span class="emat">FRANCAIS</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
+<div class="eday"><div class="eday-title">vendredi 27/11 <span class="eday-range">08:55 - 16:45</span></div><div class="erow cancelled"><span class="etime">08:00-08:55</span><span class="emat">FRANCAIS (annulé)</span><span class="eprof">MANNINO C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">08:55-09:50</span><span class="emat">ANGLAIS LV1</span><span class="eprof">LE MASLE C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">10:10-11:05</span><span class="emat">TECHNOLOGIE</span><span class="eprof">ESPARIAT  C. · Salle 4B</span></div>
 <div class="erow"><span class="etime">11:05-12:00</span><span class="emat">ARTS PLASTIQUES</span><span class="eprof">CAMELIA G. · SALLE D'ARTS</span></div>
@@ -169,27 +171,6 @@ footer { text-align:center; font-size:0.65rem; color:#999; margin-top:16px; padd
 <div class="erow pause"><span class="etime">15:35-17:00</span><span class="emat">Pause</span></div>
 </div>
 <div class="section-title" id="devoirs-Patxi">📝 Devoirs</div>
-<div class="row ">
-  <div class="row-top">
-    <span class="matiere">MATHEMATIQUES</span>
-    <span class="ddate">jeudi 26/11</span>
-  </div>
-  <div class="contenu">⬜ Calcul mental Apprendre critère de divisibilité Finir exercice p.75 n° 30, p.76 n° 48 - 54 , p.77 n° 55 - 57 - 66</div>
-</div>
-<div class="row ">
-  <div class="row-top">
-    <span class="matiere">ANGLAIS LV1</span>
-    <span class="ddate">jeudi 26/11</span>
-  </div>
-  <div class="contenu">⬜ Terminer les exercices sur le prétérit simple (sauf ceux sur la prononciation)</div>
-</div>
-<div class="row ">
-  <div class="row-top">
-    <span class="matiere">EDUCATION MUSICALE</span>
-    <span class="ddate">jeudi 26/11</span>
-  </div>
-  <div class="contenu">⬜ Savoir jouer un accord (ex: F#m ou G ou Db...) et savoir jouer la suite d'accords de "Memories" au clavier Revoir le chant et apprendre la suite https://www.onlinepianist.com/virtual-piano/fr</div>
-</div>
 <div class="row ">
   <div class="row-top">
     <span class="matiere">ANGLAIS LV1</span>
@@ -355,13 +336,6 @@ footer { text-align:center; font-size:0.65rem; color:#999; margin-top:16px; padd
 </div>
 <div id="child-juliette" class="childview">
 <div class="section-title" id="devoirs-Juliette">📝 Devoirs</div>
-<div class="row ">
-  <div class="row-top">
-    <span class="matiere">C</span>
-    <span class="ddate">jeudi 26/11</span>
-  </div>
-  <div class="contenu">⬜ -Mathématiques: calcul : revoir C3+C6 -Grammaire: leçon G2: les types de phrases -Faire signer le lutin noir</div>
-</div>
 <div class="row ">
   <div class="row-top">
     <span class="matiere">C</span>
